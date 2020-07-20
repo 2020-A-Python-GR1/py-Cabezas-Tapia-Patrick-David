@@ -1,9 +1,4 @@
 class Marca_auto:
-    nombre=None#stirng
-    pais_origen=None#string
-    fecha_creacion=None#date
-    sucursal_local=None#boolean
-    valor=None #int or float
     
     def __init__(self,nombre,pais_origen,fecha_creacion,sucursal_local,valor):        
         self.nombre=nombre
@@ -16,11 +11,6 @@ class Marca_auto:
         return f"Nombre: {self.nombre}, País de Origen: {self.pais_origen}, Fecha de creacion: {self.fecha_creacion}, Sucursal Local: {self.sucursal_local}, Valor: {self.valor}."
 
 class Modelo_auto:
-    nombre=None#string
-    tipo=None#int
-    precio_bace=None#float
-    hibrido=None#bool
-    marca=None #strig
 
     def __init__(self,nombre,tipo,precio_bace,hibrido,marca):
         self.nombre=nombre
