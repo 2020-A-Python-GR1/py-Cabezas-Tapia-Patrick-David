@@ -55,7 +55,9 @@ def llenar_valores_vacios(series, tipo):
             series_valores_llenos = series.fillna(promedio)
             return series_valores_llenos
         if(tipo == 'mas_repetido'):
-            pass
+            mas_repetido = series.value_counts().idxmax()
+            series_valores_llenos = series.fillna(mas_repetido)
+            return series_valores_llenos
 
 
 def transformar_df(df):
@@ -66,24 +68,24 @@ def transformar_df(df):
 
         serie_w = copia_df['width']
         serie_h = copia_df['height']
-        serie_u = copia_df['units']
-        serie_i = copia_df['title']
+        serie_u = copia_df['width']
+        serie_i = copia_df['height']
         
-        copia_df.loc[:, 'width']  = llenar_valores_vacios(
-            serie_w, 
-            'promedio')
+        #copia_df.loc[:, 'width']  = llenar_valores_vacios(
+         #   serie_w, 
+          #  'promedio')
         
-        copia_df.loc[:, 'height']  = llenar_valores_vacios(
-            serie_h, 
-            'promedio')
+       # copia_df.loc[:, 'height']  = llenar_valores_vacios(
+         #   serie_h, 
+          #  'promedio')
         
         copia_df.loc[:, 'units']  = llenar_valores_vacios(
             serie_u, 
             'mas_repetido')
         
-        copia_df.loc[:, 'title']  = llenar_valores_vacios(
-            serie_i, 
-            'mas_repetido')
+       # copia_df.loc[:, 'title']  = llenar_valores_vacios(
+        #    serie_i, 
+         #   'mas_repetido')
         
         lista_df.append(copia_df)
     df_completo = pd.concat(lista_df)
