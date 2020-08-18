@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #titulo-uno{
+            background-color: aqua;
+        }
+        h1{
+            background-color: green;
+        }
+        
+        body{
+            color: brown;
+            background:black;
+        }
+        .fondo-rojo{
+            background:red;
+        }
+        .fondo-verde{
+            background:green;
+        }
+        .fondo-amarillo{
+            background:yellow;
+        }
+        p{
+            class="fondo-amarillo";
+            background:blue;
+        }
+        body > ul > li > p{
+            background:pink;
+        }
+        li > p{
+            background:violet;
+        }
+        /*el orden que se define es el que importa*/
+    </style>
+    <title>Scrapy</title>
+</head>
+<body>
+    <h1 id="titulo-uno">TITULO</h1>
+    <h1 class="fondo-rojo">titulo 2</h1>
+    <p class="">parrafo uno</p>
+    <p class="fondo-rojo fondo-amarillo fondo-verde">parrafo dos</p>
+    <p class="fondo-rojo">parrafo tres</p>
+    <ul>
+        <li>Uno</li>
+        <li><p>Dos</p></li>
+        <li>Tres</li>
+    </ul>
+    <li><p>fuera del ul</p></li>
+</body>
+</html>
