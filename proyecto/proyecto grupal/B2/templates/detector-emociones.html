@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <!--css de bootstrap-->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/sandstone/bootstrap.min.css">
+        <!-- Fuente -->
+        <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@700&display=swap" rel="stylesheet">
+        <!--css propio-->
+        <link rel="stylesheet" href="{{'main.css'}}">
+</head>
+<body>
+    <!--Este es el contenedor de todo-->
+    <div main class="container-4 text-center mt-5">
+
+        <!--Esta es la division para la pantalla de la camara-->
+        <div>
+            <h2>Camara</h2>
+            <img id="video" src="{{ url_for('video_viewer') }}">
+        </div>
+
+        <!--Esta es la division para los botones-->
+        <div class="col">
+            <div class="row">
+                <!--Estas son las columnas para los botones-->
+                <div class="col">
+                    <form method="post" action="/create-user">                    
+                        <input class="btn btn-primary btn-block" type="submit" value="Iniciar" name="Iniciar"/>
+                        <input class="btn btn-primary btn-block" type="submit" value="Detener" name="Detener"/>
+                    </form>
+                </div> 
+                <div class="col">
+                    <form action="/graficos" method="GET">
+                        <button class="btn btn-primary btn-block mt-4">
+                            Estadisticas
+                        </button>
+                    </form>
+                    <form action="/" method="GET">
+                        <button class="btn btn-primary btn-block mt-4">
+                            terminar
+                        </button>
+                    </form>
+                </div>
+                <div class="col">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
